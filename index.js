@@ -33,7 +33,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'installlation',
+        name: 'installation',
         message: 'Provide installation instructions for your project. (Required)',
         validate: installInput => {
             if (installInput) {
@@ -58,11 +58,17 @@ const questions = [
         }
     },
     {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your project.',
+        choices: ['MIT License', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense']
+    },
+    {
         type: 'input',
-        name: 'contribution',
+        name: 'contributing',
         message: 'Provide contribution guidelines for your project. (Required)',
-        validate: contributionInput => {
-            if (contributionInput) {
+        validate: contributingInput => {
+            if (contributingInput) {
                 return true;
             } else {
                 console.log('Please enter contribution guidelines for your project!');
@@ -72,22 +78,16 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'test',
+        name: 'tests',
         message: 'Provide test instructions for your project. (Required)',
-        validate: testInput => {
-            if (testInput) {
+        validate: testsInput => {
+            if (testsInput) {
                 return true;
             } else {
                 console.log('Please enter test instructions for your project!');
                 return false;
             }
         }
-    },
-    {
-        type: 'list',
-        name: 'license',
-        message: 'Choose a license for your project.',
-        choices: ['MIT License', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense']
     },
     {
         type: 'input',
@@ -127,6 +127,13 @@ function init() {
     return inquirer.prompt (questions)
     .then((data) => {
         console.log(data);
+        return data;
+    })
+    .then((data) => {
+        return generateMarkdown(data);
+    })
+    .then((markdown) => {
+        console.log(markdown);
     });
 }
 
