@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -87,6 +88,32 @@ const questions = [
         name: 'license',
         message: 'Choose a license for your project.',
         choices: ['MIT License', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense']
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub Username (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub Username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false;
+            }
+        }
     }
 ];
 
