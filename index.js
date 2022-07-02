@@ -153,8 +153,7 @@ function init() {
     })
     // write README file to dist folder
     .then((markdown) => {
-        const fileName = "README.md";
-        return writeToFile(fileName, markdown);
+        return writeToFile("README.md", markdown);
     })
     // display response message
     .then((writeToFileResponse) => {
