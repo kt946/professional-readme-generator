@@ -28,7 +28,7 @@ To use this application:
 - When all prompts are answered, a message will inform the user that the README file has been created.
 - Navigate to the 'dist' directory to find your completed README.md.
 
-[Demo Video](./assets/demo.mp4)
+https://user-images.githubusercontent.com/103476893/177018521-cd9d6b09-daac-420a-afa9-ab4984caeda1.mp4
 
 ## License
 
