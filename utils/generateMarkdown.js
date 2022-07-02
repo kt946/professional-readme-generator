@@ -53,7 +53,7 @@ function generateMarkdown(data) {
   ${data.github}
 
   ${data.email}
-`;
+  `;
 }
 
 module.exports = generateMarkdown;
