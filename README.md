@@ -3,7 +3,7 @@
 ## Description
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 
-For this week's challenge, I built a professional READMe generator using JavaScript, the Inquirer package, and the command-line interface. This applications allows a developer to create a project README.md by answering questions prompted by the command line. Once completed the application will then take the developer's answers and create a markdown for their README without having to build one from scratch. This challenge introduced me to technologies such as node.js, npm(Node Package Manager), the inquirer package, and ES6 JavaScript syntax.
+For this week's challenge, I built a professional README generator using JavaScript, the Inquirer package, and the command-line interface. This applications allows a developer to create a project README.md by answering questions prompted by the command line. Once completed the application will then take the developer's answers and create a markdown for their README without having to build one from scratch. This challenge introduced me to technologies such as node.js, npm(Node Package Manager), the inquirer package, and ES6 JavaScript syntax.
 
 ## Table of Contents
 
