@@ -1,10 +1,10 @@
 
-  # Test
+  # Sample
 
   ## Description
-  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-  Test
+  [![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
+  
+  Sample
 
   ## Table of Contents
 
@@ -17,27 +17,29 @@
   
   ## Installation
 
-  Test
+  Sample
 
   ## Usage
 
-  Test
+  Sample
 
   ## License
 
-  This application is covered under the [MIT License](https://opensource.org/licenses/MIT).
+  This application is covered under the [MIT](https://opensource.org/licenses/MIT).
 
   ## Contributing
 
-  Test
+  Sample
 
   ## Tests
 
-  Test
+  Sample
 
   ## Questions
 
-  Test
+  You can reach me at the following links for questions, issues, or suggestions regarding the application.
 
-  Test
+  - GitHub: https://github.com/Sample
+
+  - Email: Sample
   

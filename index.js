@@ -61,7 +61,16 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license for your project.',
-        choices: ['MIT License', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'Unlicense']
+        choices: [
+            'MIT', 
+            'GPL-3.0', 
+            'AGPL-3.0', 
+            'LGPL-3.0', 
+            'MPL-2.0', 
+            'Apache-2.0', 
+            'BSL-1.0', 
+            'Unlicense'
+        ]
     },
     {
         type: 'input',
@@ -121,11 +130,12 @@ const questions = [
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
         fs.writeFile(`./dist/${fileName}`, data, err => {
+            // On fail, reject promise and send error to '.catch()' method
             if (err) {
                 reject(err);
                 return;
             }
-
+            // On success, resolve promise and send message data to '.then()' method
             resolve({
                 ok: true,
                 message: 'README created!'
@@ -137,17 +147,20 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     return inquirer.prompt(questions)
+    // generate markdown of README
     .then((data) => {
-        // console.log(data);
         return generateMarkdown(data);
     })
+    // write README file to dist folder
     .then((markdown) => {
         const fileName = "README.md";
         return writeToFile(fileName, markdown);
     })
+    // display response message
     .then((writeToFileResponse) => {
         console.log(writeToFileResponse.message);
     })
+    // display error
     .catch(err => {
         console.log(err);
     });
