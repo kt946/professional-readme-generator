@@ -2,6 +2,7 @@
   # Test
 
   ## Description
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
   Test
 
@@ -24,7 +25,7 @@
 
   ## License
 
-  MIT License
+  This application is covered under the [MIT License](https://opensource.org/licenses/MIT).
 
   ## Contributing
 

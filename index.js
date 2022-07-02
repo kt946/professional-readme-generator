@@ -61,14 +61,14 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license for your project.',
-        choices: ['MIT License', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense']
+        choices: ['MIT License', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'Unlicense']
     },
     {
         type: 'input',
-        name: 'contributing',
+        name: 'contribution',
         message: 'Provide contribution guidelines for your project. (Required)',
-        validate: contributingInput => {
-            if (contributingInput) {
+        validate: contributionInput => {
+            if (contributionInput) {
                 return true;
             } else {
                 console.log('Please enter contribution guidelines for your project!');
@@ -120,7 +120,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/'+ fileName, data, err => {
+        fs.writeFile(`./dist/${fileName}`, data, err => {
             if (err) {
                 reject(err);
                 return;
@@ -136,12 +136,9 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    return inquirer.prompt (questions)
+    return inquirer.prompt(questions)
     .then((data) => {
-        //console.log(data);
-        return data;
-    })
-    .then((data) => {
+        // console.log(data);
         return generateMarkdown(data);
     })
     .then((markdown) => {
