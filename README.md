@@ -23,7 +23,7 @@ To install this application:
 ## Usage
 
 To use this application:
-- When your command-line terminal is in the repository's root directory, type 'ndoe index.js' into the command-line to start the application.
+- When your command-line terminal is in the repository's root directory, type 'node index.js' into the command-line to start the application.
 - Answer each prompt that displays in the terminal. Note that the prompts require an input before proceeding to the next question.
 - When all prompts are answered, a message will inform the user that the README file has been created.
 - Navigate to the 'dist' directory to find your completed README.md.
