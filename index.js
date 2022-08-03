@@ -100,6 +100,19 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'credits',
+        message: 'Enter the GitHub usernames of the developers who contributed to the project (Required)',
+        validate: creditsInput => {
+            if (creditsInput) {
+                return true;
+            } else {
+                console.log('Please enter a GitHub username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'github',
         message: 'Enter your GitHub Username (Required)',
         validate: githubInput => {
